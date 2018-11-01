@@ -1,1 +1,134 @@
-
+<table class="navbar" border="1">
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="/">Home</a>
+                    </th>
+                    <th>
+                        <a href="/department">DEPARTMENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/patient">PATIENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/branch">BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor">DOCTOR</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_branch">DOCTOR/BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_department">DOCTOR/DEPARTMENT</a> Interactions
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Branch Entity Interactions</h1>
+        <h3>Add a new branch:</h3>
+        <form id="addbranch" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+            Branch Name:
+            <input name="Name" type="text" />
+            <br />
+            Street Address:
+            <input name="Street_Address" type="text" />
+            <br />
+            City:
+            <input name="City" type="text" />
+            <br />
+            <!-- Select options adapted from: https://www.freeformatter.com/usa-state-list-html-select.html -->
+            State:
+            <select name="State">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <br />
+            Zipcode:
+            <input name="Zip_Code" type="number" />
+            <br />
+            Capacity:
+            <input name="Capacity" type="number" />
+            <br />
+            <input value="Submit" type="submit" />
+        </form>
+        <br />
+        <h3>Current branches:</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Branch Name</th>
+                    <th>Street Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zipcode</th>
+                    <th>Capacity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{Name}}</td>
+                    <td>{{Street_Address}}</td>
+                    <td>{{City}}</td>
+                    <td>{{State}}</td>
+                    <td>{{Zip_Code}}</td>
+                    <td>{{Capacity}}</td>
+                    <!--<td>
+                    <button onclick="deleteBranch({{Id}})">Delete</button>
+                </td>
+                <td>
+                    <a href="/branch/{{Id}}">Update</a>
+                </td>
+                    -->
+                </tr>
+            </tbody>
+        </table>
