@@ -17,7 +17,7 @@ module.exports = function(){
 
   // When page loads, display all departments
   
-  router.get('/department', function(req, res){
+  router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
         //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
