@@ -27,6 +27,19 @@ module.exports = function(){
             complete();
         });
 }
+    
+    // Display branches for branch drop-down menu
+    
+    function getBranches(res, mysql, context, complete){
+        mysql.pool.query("SELECT Id, Name FROM Hosp_Branch;", function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+            context.branches  = results;
+            complete();
+        });
+}
 
   // When page loads, display all patients
   
@@ -37,9 +50,10 @@ module.exports = function(){
         var mysql = req.app.get('mysql');
         getPatients(res, mysql, context, complete);
         getDoctors(res, mysql, context, complete);
+        getBranches(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 2){
+            if(callbackCount >= 3){
                 res.render('patient', context);
             }
 
