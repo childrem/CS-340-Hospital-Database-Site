@@ -69,7 +69,7 @@ app.get('/department',function(req,res,next){
       return;
     }
     context.results = JSON.stringify(rows);
-    res.render('department');
+    res.render('department',context);
   });
 
 app.get('/branch',function(req,res){
