@@ -30,7 +30,9 @@
         <form id="adddoctor_branch" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
             Branch:
             <select name="BId">
-                <!--<option value="{{Id}}">{{Name}}</option> -->
+                {{#each branches}}
+                <option value="{{Id}}">{{Name}}</option>
+                {{/each}}
             </select>
             <br />
             Doctor:
