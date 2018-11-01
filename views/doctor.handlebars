@@ -1,1 +1,66 @@
-
+<table class="navbar" border="1">
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="/">Home</a>
+                    </th>
+                    <th>
+                        <a href="/department">DEPARTMENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/patient">PATIENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/branch">BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor">DOCTOR</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_branch">DOCTOR/BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_department">DOCTOR/DEPARTMENT</a> Interactions
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Doctor Entity Interactions</h1>
+        <h3>Add a new doctor:</h3>
+        <form id="adddoctor" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+            First Name:
+            <input name="Fname" type="text" />
+            <br />
+            Last Name:
+            <input name="Lname" type="text" />
+            <br />
+            Medical License Number:
+            <input name="License" type="number" />
+            <br />
+            <input value="Submit" type="submit" />
+        </form>
+        <br />
+        <h3>Current doctors:</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>License Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{Fname}}</td>
+                    <td>{{Lname}}</td>
+                    <td>{{License}}</td>
+                    <!--<td>
+                    <button onclick="deleteDoctor({{Id}})">Delete</button>
+                </td>
+                <td>
+                    <a href="/doctor/{{Id}}">Update</a>
+                </td>
+                    -->
+                </tr>
+            </tbody>
+        </table>
