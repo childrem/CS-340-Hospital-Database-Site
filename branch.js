@@ -22,7 +22,7 @@ module.exports = function(){
         var context = {};
         //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
-        getDepartments(res, mysql, context, complete);
+        getBranches(res, mysql, context, complete);
         function complete(){
             callbackCount++;
             if(callbackCount >= 1){
