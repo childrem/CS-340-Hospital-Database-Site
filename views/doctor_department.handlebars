@@ -30,12 +30,16 @@
         <form id="adddoctor_department" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
             Doctor:
             <select name="DocId">
-               <!-- <option value="{{Id}}">{{Lname}}</option> -->
+               {{#each doctors}}
+               <option value="{{Id}}">{{DoctorName}}</option>
+               {{/each}}
             </select>
             <br />
             Department:
             <select name="DepartId">
-                <!-- <option value="{{Id}}">{{Title}}</option> -->
+                {{#each departments}}
+                <option value="{{Id}}">{{Department}}</option>
+                {{/each}}
             </select>
             <br />
             <input value="Submit" type="submit" />
