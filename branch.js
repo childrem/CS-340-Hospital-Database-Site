@@ -2,7 +2,7 @@ module.exports = function(){
     var express = require('express');
     var router = express.Router();
 
-  // Display departments for department page
+  // Display branches for branch page
   
     function getBranches(res, mysql, context, complete){
         mysql.pool.query("SELECT Name, Street_Address, City, State, Zip_Code, Capacity FROM Hosp_Branch;", function(error, results, fields){
@@ -15,7 +15,7 @@ module.exports = function(){
         });
 }
 
-  // When page loads, display all departments
+  // When page loads, display all branches
   
   router.get('/', function(req, res){
         var callbackCount = 0;
