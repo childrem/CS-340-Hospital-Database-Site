@@ -70,7 +70,8 @@ app.get('/department',function(req,res,next){
     }
     context.results = JSON.stringify(rows);
     res.render('department',context);
-  });
+  })
+});
 
 app.get('/branch',function(req,res){
   //var context = {};
