@@ -22,6 +22,7 @@ app.use('/doctor', require('./doctor.js'));
 app.use('/doctor_branch', require('./doctor_branch.js'));
 app.use('/doctor_department', require('./doctor_department.js'));
 app.use('/patient', require('./patient.js'));
+app.use('/update_patient', require('./update_patient.js'));
 app.use('/', express.static('public'));
 
 app.use(function(req,res){
