@@ -18,6 +18,7 @@ module.exports = function(){
   // When page loads, display patient's info to update
   
   router.get('/', function(req, res){
+      /*
         var callbackCount = 0;
         var context = {};
         //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
@@ -26,10 +27,13 @@ module.exports = function(){
         function complete(){
             callbackCount++;
             if(callbackCount >= 0){
-                res.render('update_patient');
+                res.render('update_patient', context);
             }
 
         }
+        
+        */
+      res.render('update_patient');
     });
     
     return router;
