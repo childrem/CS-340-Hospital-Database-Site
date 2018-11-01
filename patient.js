@@ -18,7 +18,7 @@ module.exports = function(){
     // Display doctors for doctor drop-down menu
     
     function getDoctors(res, mysql, context, complete){
-        mysql.pool.query("SELECT CONCAT(Fname,' ',Lname) AS `DoctorName` FROM Hosp_Doctor;", function(error, results, fields){
+        mysql.pool.query("SELECT Id, CONCAT(Fname,' ',Lname) AS `DoctorName` FROM Hosp_Doctor;", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
