@@ -1,1 +1,56 @@
-
+<table class="navbar" border="1">
+        <tbody>
+            <tr>
+                <th>
+                    <a href="index.html">Home</a>
+                </th>
+                <th>
+                    <a href="department.html">DEPARTMENT</a> Interactions
+                </th>
+                <th>
+                    <a href="patient.html">PATIENT</a> Interactions
+                </th>
+                <th>
+                    <a href="branch.html">BRANCH</a> Interactions
+                </th>
+                <th>
+                    <a href="doctor.html">DOCTOR</a> Interactions
+                </th>
+                <th>
+                    <a href="doctor_branch.html">DOCTOR/BRANCH</a> Interactions
+                </th>
+                <th>
+                    <a href="doctor_department.html">DOCTOR/DEPARTMENT</a> Interactions
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Department Entity Interactions</h1>
+    <h3>Add new department:</h3>
+    <form id="adddepartment" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+        Department Title:
+        <input name="title" type="text" />
+        <br />
+        <input value="Submit" type="submit" />
+    </form>
+    <br />
+    <h3>Current Departments:</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{Title}}</td>
+                <!--<td>
+                    <button onclick="deleteDepartment({{Id}})">Delete</button>
+                </td>
+                <td>
+                    <a href="/department/{{Id}}">Update</a>
+                </td>
+                    -->
+            </tr>
+        </tbody>
+    </table>
