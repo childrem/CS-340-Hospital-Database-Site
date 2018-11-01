@@ -50,16 +50,12 @@
                 </tr>
             </thead>
             <tbody>
+                {{#each docdepartments}}
                 <tr>
-                    <td>{{DocId}}</td>
-                    <td>{{DepartId}}</td>
-                    <td>
-                        <button onclick="deleteDoctor_Department({{DocId,DepartId}}">Delete</button>
-                    </td>
-                    <!--<td>
-                    <a href="/doctor_department/{{DocId,DepartId}}">Update</a>
-                </td>
-                    -->
+                    <td>{{Doctor}}</td>
+                    <td>{{Department}}</td>
+                    <!-- NEED TO VISIT HTML FILE TO get data cell and delete button for FINAL!!! -->
                 </tr>
+                {{/each}}
             </tbody>
         </table>
