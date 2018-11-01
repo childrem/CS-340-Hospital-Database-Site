@@ -55,7 +55,9 @@
             <br />
             Branch:
             <select name="Branch">
-                <!-- <option value="{{Id}}">{{name}}</option> -->
+                {{#each branches}}
+                <option value="{{Id}}">{{Name}}</option>
+                {{/each}}
             </select>
             <br />
             <input value="Submit" type="submit" />
