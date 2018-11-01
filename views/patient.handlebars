@@ -48,12 +48,12 @@
             <br />
             Doctor:
             <select name="Doctor">
-                <option value="{{Id}}">{{name}}</option>
+                <!-- <option value="{{Id}}">{{name}}</option> -->
             </select>
             <br />
             Branch:
             <select name="Branch">
-                <option value="{{Id}}">{{name}}</option>
+                <!-- <option value="{{Id}}">{{name}}</option> -->
             </select>
             <br />
             <input value="Submit" type="submit" />
@@ -74,20 +74,23 @@
                 </tr>
             </thead>
             <tbody>
+                {{#each patients}}
                 <tr>
-                    <td>{{Fname}}</td>
-                    <td>{{Lname}}</td>
+                    <td>{{FirstName}}</td>
+                    <td>{{LastName}}</td>
                     <td>{{Gender}}</td>
-                    <td>{{Birthdate}}</td>
-                    <td>{{Room}}</td>
+                    <td>{{DateofBirth}}</td>
+                    <td>{{RoomNumber}}</td>
                     <td>{{Doctor}}</td>
                     <td>{{Branch}}</td>
+                    <!-- NEED TO VISIT HTML page to get delete functionality for final!!! -->
                     <td>
-                        <button onclick="deletePatient({{Id}})">Delete</button>
+                        <button>Delete</button>
                     </td>
                     <td>
-                        <a href="update_patient.html">Update</a> <!--/patient/{{Id}}-->
+                        <a href="/update_patient">Update</a> <!--/patient/{{Id}}-->
                     </td>
                 </tr>
+                {{/each}}
             </tbody>
         </table>
