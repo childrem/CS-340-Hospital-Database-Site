@@ -14,6 +14,19 @@ module.exports = function(){
             complete();
         });
 }
+    
+    // Display doctors for doctor drop-down menu
+    
+    function getDoctors(res, mysql, context, complete){
+        mysql.pool.query("SELECT CONCAT(Fname,' ',Lname) AS `DoctorName` FROM Hosp_Doctor;", function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+            context.doctors  = results;
+            complete();
+        });
+}
 
   // When page loads, display all patients
   
@@ -23,9 +36,10 @@ module.exports = function(){
         //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
         getPatients(res, mysql, context, complete);
+        getDoctors(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 1){
+            if(callbackCount >= 2){
                 res.render('patient', context);
             }
 
