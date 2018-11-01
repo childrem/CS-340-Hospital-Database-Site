@@ -1,1 +1,85 @@
-
+<table class="navbar" border="1">
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="/">Home</a>
+                    </th>
+                    <th>
+                        <a href="/department">DEPARTMENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/patient">PATIENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/branch">BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor">DOCTOR</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_branch">DOCTOR/BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_department">DOCTOR/DEPARTMENT</a> Interactions
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Update Patient Form</h1>
+        <h3>The patient selected currently has this information:</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Room Number</th>
+                    <th>Doctor</th>
+                    <th>Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{Fname}}</td>
+                    <td>{{Lname}}</td>
+                    <td>{{Gender}}</td>
+                    <td>{{Birthdate}}</td>
+                    <td>{{Room}}</td>
+                    <td>{{Doctor}}</td>
+                    <td>{{Branch}}</td>
+            </tbody>
+        </table>
+        <br />
+        <h3>Please enter the updated information for this patient below:</h3>
+        <form id="addpatient" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+            First Name:
+            <input name="Fname" type="text" />
+            <br />
+            Last Name:
+            <input name="Lname" type="text" />
+            <br />
+            Gender:
+            <select name="Gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <br />
+            Date of Birth:
+            <input name="Birthdate" type="date" />
+            <br />
+            Room Number:
+            <input name="Room" type="number" />
+            <br />
+            Doctor:
+            <select name="Doctor">
+                <option value="{{Id}}">{{name}}</option>
+            </select>
+            <br />
+            Branch:
+            <select name="Branch">
+                <option value="{{Id}}">{{name}}</option>
+            </select>
+            <br />
+            <input value="Confirm Update" type="submit" />
+        </form>
