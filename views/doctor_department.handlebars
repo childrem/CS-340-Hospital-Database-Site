@@ -1,1 +1,65 @@
-
+<table class="navbar" border="1">
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="/">Home</a>
+                    </th>
+                    <th>
+                        <a href="/department">DEPARTMENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/patient">PATIENT</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/branch">BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor">DOCTOR</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_branch">DOCTOR/BRANCH</a> Interactions
+                    </th>
+                    <th>
+                        <a href="/doctor_department">DOCTOR/DEPARTMENT</a> Interactions
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Doctor/Department Relationship Interactions</h1>
+        <h3>Add a new doctor/department relationship:</h3>
+        <form id="adddoctor_department" action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+            Doctor:
+            <select name="DocId">
+                <option value="{{Id}}">{{Lname}}</option>
+            </select>
+            <br />
+            Department:
+            <select name="DepartId">
+                <option value="{{Id}}">{{Title}}</option>
+            </select>
+            <br />
+            <input value="Submit" type="submit" />
+        </form>
+        <br />
+        <h3>Current doctor/department associations:</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{DocId}}</td>
+                    <td>{{DepartId}}</td>
+                    <td>
+                        <button onclick="deleteDoctor_Department({{DocId,DepartId}}">Delete</button>
+                    </td>
+                    <!--<td>
+                    <a href="/doctor_department/{{DocId,DepartId}}">Update</a>
+                </td>
+                    -->
+                </tr>
+            </tbody>
+        </table>
