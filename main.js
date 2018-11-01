@@ -61,6 +61,17 @@ app.get('/',function(req,res){
     res.render('home');
   });
 
+app.get('/department',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('department');
+  });
+
 /*
 
 app.get('/insert',function(req,res,next){
