@@ -48,7 +48,9 @@
             <br />
             Doctor:
             <select name="Doctor">
-                <!-- <option value="{{Id}}">{{name}}</option> -->
+                {{#each doctors}}
+                <option value="{{Id}}">{{DoctorName}}</option>
+                {{/each}}
             </select>
             <br />
             Branch:
