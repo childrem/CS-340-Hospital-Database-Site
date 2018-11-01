@@ -60,5 +60,23 @@ module.exports = function(){
         }
     });
     
+    
+    // When user submits a new doctor/branch relationship, add it to the database and refresh page to display new row
+    
+    router.post('/', function(req, res){       
+        var mysql = req.app.get('mysql');
+        var sql = "INSERT INTO Hosp_Doctor_Branch (BId, DocId) VALUES (?,?);";
+        var inserts = [req.body.BId, req.body.DocId];
+        sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+            if(error){
+                console.log(JSON.stringify(error))
+                res.write(JSON.stringify(error));
+                res.end();
+            }else{
+                res.redirect('/doctor_branch');
+            }
+        });
+});
+    
     return router;
 }();
