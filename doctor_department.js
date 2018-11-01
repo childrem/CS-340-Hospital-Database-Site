@@ -14,7 +14,33 @@ module.exports = function(){
             complete();
         });
 }
-
+    
+    // Display doctors for the doctor drop-down menu
+    
+    function getDoctors(res, mysql, context, complete){
+        mysql.pool.query("SELECT Id, CONCAT(Fname,' ',Lname) AS `DoctorName` FROM Hosp_Doctor;", function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+            context.doctors  = results;
+            complete();
+        });
+}
+    
+    // Display departments for the department drop-down menu
+    
+    function getDepartments(res, mysql, context, complete){
+        mysql.pool.query("SELECT Id, Title AS `Department` FROM Hosp_Department;", function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+            context.departments  = results;
+            complete();
+        });
+}
+    
   // When page loads, display all doctor/department relationships
   
   router.get('/', function(req, res){
@@ -23,9 +49,11 @@ module.exports = function(){
         //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
         getDocDepartment(res, mysql, context, complete);
+        getDepartments(res, mysql, context, complete);
+        getDoctors(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 1){
+            if(callbackCount >= 3){
                 res.render('doctor_department', context);
             }
 
