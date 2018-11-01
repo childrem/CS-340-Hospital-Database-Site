@@ -1,4 +1,4 @@
-// This file was adapted from the CS 340 Sample Web App by knightsamar on github
+/*This file was adapted from the CS 340 Sample Web App by knightsamar on github */
 
 /*  
     Uses express, dbcon for database connection, body parser to parse form data 
