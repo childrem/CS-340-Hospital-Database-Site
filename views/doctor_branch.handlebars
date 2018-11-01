@@ -37,7 +37,9 @@
             <br />
             Doctor:
             <select name="DocId">
-                <!--<option value="{{Id}}">{{Lname}}</option> -->
+                {{#each doctors}}
+                <option value="{{Id}}">{{DoctorName}}</option>
+                {{/each}}
             </select>
             <br />
             <input value="Submit" type="submit" />
