@@ -5,7 +5,7 @@ module.exports = function(){
   // Display departments for department page
   
     function getBranches(res, mysql, context, complete){
-        mysql.pool.query("SELECT Name AS `Branch Name`, Street_Address AS `Street Address`, City, State, Zip_Code AS Zipcode, Capacity FROM Hosp_Branch;", function(error, results, fields){
+        mysql.pool.query("SELECT Name, Street_Address, City, State, Zip_Code, Capacity FROM Hosp_Branch;", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
