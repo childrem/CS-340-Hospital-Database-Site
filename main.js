@@ -4,6 +4,7 @@
     Uses express, dbcon for database connection, body parser to parse form data 
     handlebars for HTML templates  
 */
+/*
 
 var express = require('express');
 var mysql = require('./dbcon.js');
@@ -36,3 +37,10 @@ app.use(function(err, req, res, next){
 app.listen(app.get('port'), function(){
   console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
+
+*/
+
+
+app.get('/', function(req,res){
+    res.render(department);
+}
