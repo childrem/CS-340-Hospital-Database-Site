@@ -61,14 +61,14 @@ app.get('/',function(req,res){
     res.render('home');
   });
 
-app.get('/department',function(req,res){
-  //var context = {};
-  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
-    //if(err){
-      //next(err);
-      //return;
-    //}
-    //context.results = JSON.stringify(rows);
+app.get('/department',function(req,res,next){
+  var context = {};
+  mysql.pool.query('SELECT Title FROM Hosp_Department', function(err, rows, fields){
+    if(err){
+      next(err);
+      return;
+    }
+    context.results = JSON.stringify(rows);
     res.render('department');
   });
 
