@@ -72,6 +72,72 @@ app.get('/department',function(req,res){
     res.render('department');
   });
 
+app.get('/branch',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('branch');
+  });
+
+app.get('/doctor',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('doctor');
+  });
+
+app.get('/doctor_branch',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('doctor_branch');
+  });
+
+app.get('/doctor_department',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('doctor_department');
+  });
+
+app.get('/patient',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('patient');
+  });
+
+app.get('/update_patient',function(req,res){
+  //var context = {};
+  //mysql.pool.query('SELECT * FROM todo', function(err, rows, fields){
+    //if(err){
+      //next(err);
+      //return;
+    //}
+    //context.results = JSON.stringify(rows);
+    res.render('update_patient');
+  });
+
 /*
 
 app.get('/insert',function(req,res,next){
