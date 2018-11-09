@@ -57,10 +57,9 @@
                 {{#each docbranches}}
                 <tr>
                     <td>{{Branch}}</td>
-                    <td>{{Doctor}}</td>
-                    <!--NEED TO VISIT THE HTML FILE FOR DELETE FUNCTIONALITY data cell and button for FINAL!!!-->
+                    <td>{{Doctor}}</td>                    
                     <td>
-                        <button>Delete</button>
+                        <button onclick="deleteDoctorBranch({{BId}},{{DocId}})">Delete</button>
                 </tr>
                 {{/each}}
             </tbody>
