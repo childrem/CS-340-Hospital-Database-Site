@@ -46,7 +46,7 @@ module.exports = function(){
   router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
-        //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
+        context.jsscripts = ["deleteDoctorBranch.js"];
         var mysql = req.app.get('mysql');
         getDocBranch(res, mysql, context, complete);
         getBranches(res, mysql, context, complete);
