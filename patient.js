@@ -91,8 +91,8 @@ module.exports = function(){
             }else{
                 res.status(202).end();
             }
-        });
-});
+        })
+})
     
     return router;
 }();
