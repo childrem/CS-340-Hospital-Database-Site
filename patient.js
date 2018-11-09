@@ -79,7 +79,7 @@ module.exports = function(){
     
     /* Route to delete a patient, simply returns a 202 upon success. Ajax will handle this. */
 
-    router.delete('/:Id', function(req, res){
+    router.delete('/:id', function(req, res){
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Hosp_Patient WHERE Id = ?";
         var inserts = [req.params.id];
