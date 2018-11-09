@@ -46,7 +46,7 @@ module.exports = function(){
   router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
-        //context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
+        context.jsscripts = ["deletepatient.js"];
         var mysql = req.app.get('mysql');
         getPatients(res, mysql, context, complete);
         getDoctors(res, mysql, context, complete);
