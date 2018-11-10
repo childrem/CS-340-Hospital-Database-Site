@@ -63,8 +63,12 @@
             <input value="Submit" type="submit" />
         </form>
         <br />
+        <form id='search_patients' action='' method=''>
+            <label>Search for patients by last name:</label>
+            <input id='last_name_to_search' type='text' name='last_name_to_search' value='' placeholder="Enter Part or All of Last Name">
+            <input type="button" value="Search" onclick="searchPatientsByLastName()">
+        </form>
         <h3>Current patients:</h3>
-        <input id="patientSearch" type="text" placeholder="Search Patients" />
         <table border="1">
             <thead>
                 <tr>
