@@ -101,10 +101,11 @@ module.exports = function(){
         context.jsscripts = ["deletepatient.js","searchpatients.js"];
         var mysql = req.app.get('mysql');
         getPatientsWithLastNameLike(req, res, mysql, context, complete);
-        //getPlanets(res, mysql, context, complete);
+        getDoctors(res, mysql, context, complete);
+        getBranches(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 1){
+            if(callbackCount >= 3){
                 res.render('patient', context);
             }
         }
