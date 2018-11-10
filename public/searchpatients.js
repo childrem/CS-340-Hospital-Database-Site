@@ -1,6 +1,6 @@
 function searchPatientsByLastName() {
-    //get the first name 
-    var first_name_search_string  = document.getElementById('first_name_search_string').value
+    //get the last name entered by user in the search bar
+    var last_name_to_search  = document.getElementById('last_name_to_search').value
     //construct the URL and redirect to it
-    window.location = '/people/search/' + encodeURI(first_name_search_string)
+    window.location = '/patients/search/' + encodeURI(last_name_to_search)
 }
