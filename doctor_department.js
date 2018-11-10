@@ -78,9 +78,6 @@ module.exports = function(){
 });
     
     router.delete('/docid/:docid/departid/:departid', function(req, res){
-        //console.log(req) //I used this to figure out where did pid and cid go in the request
-        console.log(req.params.bid)
-        console.log(req.params.docid)
         var mysql = req.app.get('mysql');
         var sql = "DELETE FROM Hosp_Doctor_Department WHERE DocId = ? AND DepartId = ?";
         var inserts = [req.params.docid, req.params.departid];
