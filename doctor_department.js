@@ -5,7 +5,7 @@ module.exports = function(){
   // Display doctor/department relationships for doctor/department page
   
     function getDocDepartment(res, mysql, context, complete){
-        mysql.pool.query("SELECT CONCAT(doc.Fname,' ',doc.Lname) AS `Doctor`, dep.Title AS `Department` FROM Hosp_Doctor doc INNER JOIN Hosp_Doctor_Department dd ON doc.Id = dd.DocId INNER JOIN Hosp_Department dep ON dep.Id = dd.DepartId;", function(error, results, fields){
+        mysql.pool.query("SELECT dd.DocId, dd.DepartId, CONCAT(doc.Fname,' ',doc.Lname) AS `Doctor`, dep.Title AS `Department` FROM Hosp_Doctor doc INNER JOIN Hosp_Doctor_Department dd ON doc.Id = dd.DocId INNER JOIN Hosp_Department dep ON dep.Id = dd.DepartId;", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
