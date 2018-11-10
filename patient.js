@@ -41,6 +41,23 @@ module.exports = function(){
         });
 }
 
+  // Select patients with close matching last names to search term
+    
+    function getPatientsWithLastNameLike(req, res, mysql, context, complete) {
+      //sanitize the input as well as include the % character
+       var query = "SELECT SELECT p.Id, p.Fname AS `FirstName`, p.Lname AS `LastName`, p.Gender AS `Gender`, p.Birthdate AS `DateofBirth`, p.Room AS `RoomNumber`, CONCAT(doc.Fname, ' ', doc.Lname) AS `Doctor`, b.name AS `Branch` FROM Hosp_Patient p INNER JOIN Hosp_Doctor doc ON p.Doctor = doc.Id INNER JOIN Hosp_Branch b ON p.Branch = b.Id WHERE Hosp_Patient.Lname LIKE " + mysql.pool.escape(req.params.s + '%');
+      console.log(query)
+
+      mysql.pool.query(query, function(error, results, fields){
+            if(error){
+                res.write(JSON.stringify(error));
+                res.end();
+            }
+            context.people = results;
+            complete();
+        });
+}
+    
   // When page loads, display all patients
   
   router.get('/', function(req, res){
