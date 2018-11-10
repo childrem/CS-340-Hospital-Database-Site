@@ -5,7 +5,7 @@ module.exports = function(){
   // Display patients for patient page
   
     function getPatients(res, mysql, context, complete){
-        mysql.pool.query("SELECT p.Id, p.Fname AS `FirstName`, p.Lname AS `LastName`, p.Gender AS `Gender`, p.Birthdate AS `DateofBirth`, p.Room AS `RoomNumber`, CONCAT(doc.Fname, ' ', doc.Lname) AS `Doctor`, b.name AS `Branch` FROM Hosp_Patient p INNER JOIN Hosp_Doctor doc ON p.Doctor = doc.Id INNER JOIN Hosp_Branch b ON p.Branch = b.Id;", function(error, results, fields){
+        mysql.pool.query("SELECT p.Id, p.Fname AS `FirstName`, p.Lname AS `LastName`, p.Gender AS `Gender`, p.Birthdate AS `DateofBirth`, p.Room AS `RoomNumber`, CONCAT(doc.Fname, ' ', doc.Lname) AS `Doctor`, b.name AS `Branch` FROM Hosp_Patient p INNER JOIN Hosp_Doctor doc ON p.Doctor = doc.Id LEFT JOIN Hosp_Branch b ON p.Branch = b.Id;", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
                 res.end();
