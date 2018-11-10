@@ -63,7 +63,7 @@ module.exports = function(){
   router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
-        context.jsscripts = ["deletepatient.js"];
+        context.jsscripts = ["deletepatient.js","searchpatients.js"];
         var mysql = req.app.get('mysql');
         getPatients(res, mysql, context, complete);
         getDoctors(res, mysql, context, complete);
@@ -92,6 +92,22 @@ module.exports = function(){
                 res.redirect('/patient');
             }
         });
+});
+    
+    /*Display all patients whose last name starts with a given string. */
+    router.get('/search/:s', function(req, res){
+        var callbackCount = 0;
+        var context = {};
+        context.jsscripts = ["deletepatient.js","searchpatients.js"];
+        var mysql = req.app.get('mysql');
+        getPatientsWithLastNameLike(req, res, mysql, context, complete);
+        //getPlanets(res, mysql, context, complete);
+        function complete(){
+            callbackCount++;
+            if(callbackCount >= 1){
+                res.render('patient', context);
+            }
+        }
 });
     
     /* Route to delete a patient, simply returns a 202 upon success. Ajax will handle this. */
