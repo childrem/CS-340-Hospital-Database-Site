@@ -13,3 +13,39 @@ body {
 .displayTableRow:hover{
   background-color:#FEA03A
 }
+
+.navbar {
+    list-style-type: none;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navlink {
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.navlink:hover {
+    background-color: #0AAE18
+}
+
+
+.navSquare {
+    float: left;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+}
+
+#outerWrapper {
+    width: 100%;
+    float: left;
+    background-color: #071C5C;
+    margin-bottom: 20px;
+}
+
+
