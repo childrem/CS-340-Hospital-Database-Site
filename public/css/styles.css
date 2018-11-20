@@ -3,11 +3,11 @@ body {
 }
 
 .displayTableRow:nth-child(even) {
-  background-color:#50F7E4
+  background-color:#A0AECC
 }
 
 .displayTableRow:nth-child(odd) {
-  background-color:#2CEA49
+  background-color:#B7E1C6
 }
 
 .displayTableRow:hover{
