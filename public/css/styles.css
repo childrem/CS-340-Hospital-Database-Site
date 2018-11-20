@@ -3,7 +3,7 @@ body {
 }
 
 .displayTableRow:nth-child(even) {
-  background-color:#ABCEF9
+  background-color:#FED671
 }
 
 .displayTableRow:nth-child(odd) {
