@@ -55,3 +55,7 @@ body {
 .resultTable {
   margin: 0 auto;
 }
+
+.sectionHeader {
+  text-align: center;
+}
