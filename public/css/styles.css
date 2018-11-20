@@ -67,3 +67,8 @@ body {
 .sectionHeader {
   text-align: center;
 }
+
+.tableHeadRow {
+  background-color:#071C5C;
+  color:white;
+}
