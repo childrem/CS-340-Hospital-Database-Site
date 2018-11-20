@@ -9,7 +9,8 @@
             <li class="navSquare"><a href="/doctor_department" class="navlink">Doctor/Department Interactions</a></li>
         </ul>
 </div>
-        <h1>Patient Entity Interactions</h1>
+        <h1 class="pageTitle">Patient Entity Interactions</h1>
+      <fieldset>
         <h3>Add a new patient:</h3>
         <form id="addpatient" action="/patient" method="post">
             First Name:
@@ -46,12 +47,15 @@
             <br />
             <input value="Submit" type="submit" />
         </form>
+      </fieldset>
         <br />
+      <fieldset>
         <form id='search_patients' action='' method=''>
             <label>Search for patients by last name:</label>
             <input required id='last_name_to_search' type='text' name='last_name_to_search' value='' placeholder="Part or All of Last Name">
             <input type="button" value="Search" onclick="searchPatientsByLastName()">
         </form>
+      </fieldset>
         <h3>Current patients:</h3>
         <table border="1">
             <thead>
