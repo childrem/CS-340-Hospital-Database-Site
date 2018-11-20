@@ -5,9 +5,10 @@ body {
 .displayTableRow:nth-child(even) {
   /*background-color:#B2FEFA */
   background-color:#071C5C;
+  color:white;
 }
 
-.displayTableRow:nth-child(even) > a {
+.displayTableRow:nth-child(even) a {
   /*background-color:#B2FEFA */
   color:white;
 }
