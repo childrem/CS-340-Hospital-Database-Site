@@ -1,9 +1,9 @@
 body {
-  background-color:#DEE3E0
+  background-color:#94D6F5
 }
 
 .displayTableRow:nth-child(even) {
-  background-color:#A0AECC
+  background-color:#ABCEF9
 }
 
 .displayTableRow:nth-child(odd) {
