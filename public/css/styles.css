@@ -14,7 +14,7 @@ body {
 }
 
 .displayTableRow:nth-child(odd) {
-  background-color:#B7E1C6
+  /*background-color:#B7E1C6 */
 }
 
 .displayTableRow:hover{
