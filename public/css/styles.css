@@ -1,3 +1,7 @@
 .displayTableRow:nth-child(even) {
   background-color:#50F7E4
 }
+
+.displayTableRow:hover{
+  background-color:#FEA03A
+}
