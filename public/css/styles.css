@@ -1,3 +1,7 @@
+body {
+  background-color:#BBBBBB
+}
+
 .displayTableRow:nth-child(even) {
   background-color:#50F7E4
 }
