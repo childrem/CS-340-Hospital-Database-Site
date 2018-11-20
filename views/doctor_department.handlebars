@@ -1,30 +1,14 @@
-<table class="navbar" border="1">
-            <tbody>
-                <tr>
-                    <th>
-                        <a href="/">Home</a>
-                    </th>
-                    <th>
-                        <a href="/department">DEPARTMENT</a> Interactions
-                    </th>
-                    <th>
-                        <a href="/patient">PATIENT</a> Interactions
-                    </th>
-                    <th>
-                        <a href="/branch">BRANCH</a> Interactions
-                    </th>
-                    <th>
-                        <a href="/doctor">DOCTOR</a> Interactions
-                    </th>
-                    <th>
-                        <a href="/doctor_branch">DOCTOR/BRANCH</a> Interactions
-                    </th>
-                    <th>
-                        <a href="/doctor_department">DOCTOR/DEPARTMENT</a> Interactions
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+<div id="outerWrapper">
+        <ul class="navbar">
+            <li class="navSquare"><a href="/" class="navlink activePage">Home</a></li>
+            <li class="navSquare"><a href="/department" class="navlink">Department Interactions</a></li>
+            <li class="navSquare"><a href="/patient" class="navlink">Patient Interactions</a></li>
+            <li class="navSquare"><a href="/branch" class="navlink">Branch Interactions</a></li>
+            <li class="navSquare"><a href="/doctor" class="navlink">Doctor Interactions</a></li>
+            <li class="navSquare"><a href="/doctor_branch" class="navlink">Doctor/Branch Interactions</a></li>
+            <li class="navSquare"><a href="/doctor_department" class="navlink">Doctor/Department Interactions</a></li>
+        </ul>
+</div>
         <h1>Doctor/Department Relationship Interactions</h1>
         <h3>Add a new doctor/department relationship:</h3>
         <form id="adddoctor_department" action="/doctor_department" method="post">
