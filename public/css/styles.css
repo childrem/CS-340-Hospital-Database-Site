@@ -2,6 +2,10 @@
   background-color:#50F7E4
 }
 
+.displayTableRow:nth-child(odd) {
+  background-color:#2CEA49
+}
+
 .displayTableRow:hover{
   background-color:#FEA03A
 }
