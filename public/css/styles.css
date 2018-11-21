@@ -59,7 +59,8 @@ body {
 
 .pageTitle {
   text-align: center;
-  font-family: 'Bree Serif', serif;
+  /*font-family: 'Bree Serif', serif; */
+  font-family: 'Cinzel', serif;
 }
 
 .resultTable {
