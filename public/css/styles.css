@@ -18,7 +18,8 @@ body {
 }
 
 .displayTableRow:hover{
-  background-color:#FEA03A
+  background-color:#FEA03A;
+  color:black;
 }
 
 .navbar {
