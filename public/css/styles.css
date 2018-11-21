@@ -23,6 +23,10 @@ body {
   color:black;
 }
 
+fieldset {
+  text-align: center;
+}
+
 .navbar {
     list-style-type: none;
     width: 1200px;
