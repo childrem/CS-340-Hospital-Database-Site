@@ -66,6 +66,7 @@ fieldset {
   text-align: center;
   /*font-family: 'Bree Serif', serif; */
   font-family: 'Cinzel', serif;
+  font-size: 40px;
 }
 
 .resultTable {
@@ -75,6 +76,7 @@ fieldset {
 .sectionHeader {
   text-align: center;
   font-family: 'Cinzel', serif;
+  font-size: 25px;
 }
 
 .tableHeadRow {
