@@ -4,7 +4,8 @@ body {
 
 .displayTableRow:nth-child(even) {
   /*background-color:#B2FEFA */
-  background-color:#071C5C;
+  /*background-color:#071C5C; */
+  background-color:teal;
   color:white;
 }
 
