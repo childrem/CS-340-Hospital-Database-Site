@@ -70,7 +70,7 @@ module.exports = function(){
             }
             context.patient = results[0];   // results contains array of objects only one was returned since id's are unique
             
-            console.log(context.patient); // WILL NOT NEED
+            //console.log(context.patient); // WILL NOT NEED
             complete();
         });
 }
