@@ -133,7 +133,7 @@ module.exports = function(){
     router.get('/:id', function(req, res){
         callbackCount = 0;
         var context = {};
-        context.jsscripts = ["selectGender.js","selectDoctor.js","selectBranch.js","updateperson.js"];
+        context.jsscripts = ["selectGender.js","selectDoctor.js","selectBranch.js","updatepatient.js"];
         var mysql = req.app.get('mysql');
         getPatient(res, mysql, context, req.params.id, complete);
         getDoctors(res, mysql, context, complete);
