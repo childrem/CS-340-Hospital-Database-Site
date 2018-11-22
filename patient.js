@@ -147,6 +147,27 @@ module.exports = function(){
         }
 });
     
+    // This route is used in the UPDATE process
+    
+    router.put('/:id', function(req, res){
+        var mysql = req.app.get('mysql');
+        //console.log(req.body)
+        //console.log(req.params.id)
+        var sql = "UPDATE Hosp_Patient SET Fname = ?, Lname = ?, Gender = ?, Birthdate = ?, Room = ?, Doctor = ?, Branch = ? WHERE id = ?";
+        var inserts = [req.body.Fname, req.body.Lname, req.body.Gender, req.body.Birthdate, req.body.Room, req.body.Doctor, req.body.Branch, req.params.id];
+        sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+            if(error){
+                console.log(error)
+                res.write(JSON.stringify(error));
+                res.end();
+            }else{
+                res.status(200);
+                res.end();
+            }
+        });
+});
+   
+    
     /* Route to delete a patient, simply returns a 202 upon success. Ajax will handle this. */
 
     router.delete('/:id', function(req, res){
