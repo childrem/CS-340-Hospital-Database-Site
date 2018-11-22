@@ -10,8 +10,9 @@
         </ul>
     </div>
 <h1 class="pageTitle">Update Patient: {{patient.Fname}} {{patient.Lname}}</h1>
-<form id="update-patient" action="/patient" method="post">
-
+<form id="update_patient" action="/patient" method="post">
+        First Name: <input type="text" name="Fname" value="{{patient.Fname}}">
+        Last Name: <input type="text" name="Lname" value="{{patient.Lname}}">
 </form>
 
 <!-- 
