@@ -76,6 +76,11 @@ module.exports = function(){
                 context.female = 1;
             }
             
+            else{
+                context.female = 0;
+            }
+            
+            console.log(context.female);
             //console.log(context.patient); // WILL NOT NEED
             complete();
         });
