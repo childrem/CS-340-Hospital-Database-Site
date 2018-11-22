@@ -29,7 +29,11 @@
         Room:
         <input type="number" name="Room" value="{{patient.Room}}">
         Doctor:
-        <!-- <select name="Doctor"> -->
+        <select name="Doctor" id="doctor-dropdown">
+                {{#each doctors}}
+                <option value="{{Id}}">{{DoctorName}}</option>
+                {{/each}}
+        </select>
         <br>
         Branch:
         <!-- <select name="Branch"> -->
