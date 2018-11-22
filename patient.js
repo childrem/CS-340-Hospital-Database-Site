@@ -138,7 +138,7 @@ module.exports = function(){
         function complete(){
             callbackCount++;
             if(callbackCount >= 1){
-                res.render('update-patient', context);
+                res.render('update_patient', context);
             }
 
         }
