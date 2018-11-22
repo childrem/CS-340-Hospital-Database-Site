@@ -1,3 +1,3 @@
-function selectPlanet(id){
+function selectGender(id){
     $("#gender-dropdown").val(id);
 }
