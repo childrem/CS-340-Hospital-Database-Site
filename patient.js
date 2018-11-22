@@ -61,7 +61,7 @@ module.exports = function(){
     // Preserve a copy of the row we are going to update so original values are not lost
     
     function getPatient(res, mysql, context, id, complete){
-        var sql = "SELECT Id AS id, Fname, Lname, Gender, CAST(Birthdate AS DATE), Room, Doctor, Branch FROM Hosp_Patient WHERE id = ?";
+        var sql = "SELECT Id AS id, Fname, Lname, Gender, Birthdate, Room, Doctor, Branch FROM Hosp_Patient WHERE id = ?";
         var inserts = [id];
         mysql.pool.query(sql, inserts, function(error, results, fields){
             if(error){
