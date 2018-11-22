@@ -126,6 +126,24 @@ module.exports = function(){
         }
 });
     
+    // router used to display the update patient page
+    
+    router.get('/:id', function(req, res){
+        callbackCount = 0;
+        var context = {};
+        //context.jsscripts = ["selectedplanet.js", "updateperson.js"];
+        var mysql = req.app.get('mysql');
+        getPatient(res, mysql, context, req.params.id, complete);
+        //getPlanets(res, mysql, context, complete);
+        function complete(){
+            callbackCount++;
+            if(callbackCount >= 1){
+                res.render('update-patient', context);
+            }
+
+        }
+});
+    
     /* Route to delete a patient, simply returns a 202 upon success. Ajax will handle this. */
 
     router.delete('/:id', function(req, res){
