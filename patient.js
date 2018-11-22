@@ -69,6 +69,8 @@ module.exports = function(){
                 res.end();
             }
             context.patient = results[0];   // results contains array of objects only one was returned since id's are unique
+            
+            console.log(context.patient); // WILL NOT NEED
             complete();
         });
 }
@@ -136,8 +138,6 @@ module.exports = function(){
         getPatient(res, mysql, context, req.params.id, complete);
         getDoctors(res, mysql, context, complete);
         getBranches(res, mysql, context, complete);
-        // WILL NOT NEED
-        console.log(context.patient);
         function complete(){
             callbackCount++;
             if(callbackCount >= 3){
