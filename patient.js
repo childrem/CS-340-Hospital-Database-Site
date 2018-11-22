@@ -134,10 +134,10 @@ module.exports = function(){
         context.jsscripts = ["selectGender.js","updateperson.js"];
         var mysql = req.app.get('mysql');
         getPatient(res, mysql, context, req.params.id, complete);
-        //getPlanets(res, mysql, context, complete);
+        getDoctors(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 1){
+            if(callbackCount >= 2){
                 res.render('update_patient', context);
             }
 
