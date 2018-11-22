@@ -136,6 +136,8 @@ module.exports = function(){
         getPatient(res, mysql, context, req.params.id, complete);
         getDoctors(res, mysql, context, complete);
         getBranches(res, mysql, context, complete);
+        // WILL NOT NEED
+        console.log(context.patient);
         function complete(){
             callbackCount++;
             if(callbackCount >= 3){
