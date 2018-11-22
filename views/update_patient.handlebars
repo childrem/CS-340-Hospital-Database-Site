@@ -37,7 +37,11 @@
         </select>
         <br>
         Branch:
-        <!-- <select name="Branch"> -->
+        <select name="Branch" id="branch-dropdown">
+                {{#each branches}}
+                <option value="{{Id}}">{{Name}}</option>
+                {{/each}}
+        </select>
         
 </form>
 
