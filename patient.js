@@ -131,7 +131,7 @@ module.exports = function(){
     router.get('/:id', function(req, res){
         callbackCount = 0;
         var context = {};
-        context.jsscripts = ["updateperson.js"];
+        context.jsscripts = ["selectGender.js","updateperson.js"];
         var mysql = req.app.get('mysql');
         getPatient(res, mysql, context, req.params.id, complete);
         //getPlanets(res, mysql, context, complete);
