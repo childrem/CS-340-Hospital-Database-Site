@@ -131,13 +131,14 @@ module.exports = function(){
     router.get('/:id', function(req, res){
         callbackCount = 0;
         var context = {};
-        context.jsscripts = ["selectGender.js","selectDoctor.js","updateperson.js"];
+        context.jsscripts = ["selectGender.js","selectDoctor.js","selectBranch.js","updateperson.js"];
         var mysql = req.app.get('mysql');
         getPatient(res, mysql, context, req.params.id, complete);
         getDoctors(res, mysql, context, complete);
+        getBranches(res, mysql, context, complete);
         function complete(){
             callbackCount++;
-            if(callbackCount >= 2){
+            if(callbackCount >= 3){
                 res.render('update_patient', context);
             }
 
