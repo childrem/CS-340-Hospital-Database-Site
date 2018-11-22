@@ -10,6 +10,7 @@
         </ul>
     </div>
 <h1 class="pageTitle">Update Patient: {{patient.Fname}} {{patient.Lname}}</h1>
+<fieldset>
 <form id="update_patient" action="/patient" method="post">
         First Name: 
         <input type="text" name="Fname" value="{{patient.Fname}}">
@@ -44,6 +45,7 @@
         </select>
         
 </form>
+</fieldset>
 
 <script defer>selectGender({{patient.Gender}});</script>
 <script defer>selectDoctor({{patient.Doctor}});</script>
