@@ -70,18 +70,18 @@ module.exports = function(){
             }
             context.patient = results[0];   // results contains array of objects only one was returned since id's are unique
             
-            /*************************ADDED gender check****************/
+            /************************* ADDED gender check - result here affects patient.handlebars file ****************/
             
             if(context.patient.Gender == 'F'){  // if patient was female we need the female option to be displayed in dropdown
                 context.female = 1;
             }
             
             else{
-                context.female = 0;
+                context.female = 0;     // means patient is male so Male should be displayed first in the drop down
             }
             
-            console.log(context.female);
-            //console.log(context.patient); // WILL NOT NEED
+            //console.log(context.female);
+            //console.log(context.patient); // Debugging
             complete();
         });
 }
