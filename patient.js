@@ -151,8 +151,8 @@ module.exports = function(){
     
     router.put('/:id', function(req, res){
         var mysql = req.app.get('mysql');
-        //console.log(req.body)
-        //console.log(req.params.id)
+        console.log(req.body)
+        console.log(req.params.id)
         var sql = "UPDATE Hosp_Patient SET Fname = ?, Lname = ?, Gender = ?, Birthdate = ?, Room = ?, Doctor = ?, Branch = ? WHERE id = ?";
         var inserts = [req.body.Fname, req.body.Lname, req.body.Gender, req.body.Birthdate, req.body.Room, req.body.Doctor, req.body.Branch, req.params.id];
         sql = mysql.pool.query(sql,inserts,function(error, results, fields){
