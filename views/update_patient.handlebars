@@ -20,8 +20,13 @@
         <br>
         Gender:
         <select name="Gender" id="gender-dropdown">
+                {{#if female}}
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+                {{else}}
                 <option value="M">Male</option>
                 <option value="F">Female</option>
+                {{/if}}
         </select>
         <br>
         Birthdate:
