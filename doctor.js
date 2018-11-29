@@ -1,3 +1,6 @@
+// Code in this file used the code in the following git repository as a foundation:
+// https://github.com/knightsamar/CS340-Sample-Web-App
+
 module.exports = function(){
     var express = require('express');
     var router = express.Router();
